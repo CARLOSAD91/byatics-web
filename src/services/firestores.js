@@ -3,115 +3,51 @@ import {
   getFirestore,
   collection,
   getDocs,
-  doc,
   setDoc,
   updateDoc,
+  doc,
   deleteDoc,
-} from "firebase/firestore/lite";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  updateProfile,
-} from "firebase/auth";
+} from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCGY217DaKn9NoFdES_-Ch00Ye-KS1LNYc",
-  authDomain: "codigo13-739a4.firebaseapp.com",
-  projectId: "codigo13-739a4",
-  storageBucket: "codigo13-739a4.appspot.com",
-  messagingSenderId: "21080353798",
-  appId: "1:21080353798:web:84860205a60e308a296787",
-  measurementId: "G-RJZPVW7RSS",
+  apiKey: "AIzaSyDvvU1vJhfzfg19NUL7a2jJhKOT7bO27T4",
+  authDomain: "byaticsapp.firebaseapp.com",
+  projectId: "byaticsapp",
+  storageBucket: "byaticsapp.appspot.com",
+  messagingSenderId: "411680392636",
+  appId: "1:411680392636:web:d3daabea3fbe39016857b9",
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Iniciar firestore
-// database : base de datos
+// iniciar database
 const db = getFirestore(app);
 
 // Hacer la peticion para poder traer los productos
-export const getProductClothes = async () => {
-  // paso 1: Traer la coleccion de datos
-  const collectionClothes = collection(db, "product_clothes");
-  // paso 2: Traer los documentos
-  const documentClothes = await getDocs(collectionClothes);
-  // paso 3: Crear un arreglo que guarde los documentos que estamos obteniendo
-  const clothes = documentClothes.docs.map((doc) => doc.data());
-  return clothes;
+export const getProjects = async () => {
+  const collectionProyects = collection(db, "proyectos");
+  const documentsProyects = await getDocs(collectionProyects);
+  const proyects = documentsProyects.docs.map((doc) => doc.data());
+  return proyects;
 };
 
-// debemos crear una funcion que se encargue de poder crear
-// elementos en nuestra base de datos
-// ojo: vamos a recibir como parametro un objeto que contenga
-// la informacion del producto que estamos creado
-export const storeProductClothe = async (product) => {
+export const storeProyect = async (proyect) => {
   const id = uuidv4().replaceAll("-", "");
-  product.id = id;
-  await setDoc(doc(db, "product_clothes", id), product);
+  proyect.id = id;
+  await setDoc(doc(db, "proyectos", id), proyect);
 };
 
 // actualizar un datos en firebase
-export const updateProductClothe = async (product) => {
-  const productRef = doc(db, "product_clothes", product.id);
-
-  await updateDoc(productRef, product);
+export const updateProyectos = async (proyect) => {
+  const productRef = doc(db, "proyectos", proyect.id);
+  await updateDoc(productRef, proyect);
 };
 
 // eliminar un registros de la db
-export const deleteProductClothe = async (id) => {
-  await deleteDoc(doc(db, "product_clothes", id));
-};
-
-// vamos a crear una funcion qu reciba un email y password
-// y cree un cuenta en firebase
-export const auth = getAuth();
-
-export const updateUserProfile = async (profile) => {
-  try {
-    await updateProfile(auth.currentUser, profile);
-    return {
-      ok: true,
-      data: "success",
-    };
-  } catch (error) {
-    return {
-      ok: false,
-      data: error.message,
-    };
-  }
-};
-
-export const storeUser = async (email, password) => {
-  try {
-    const user = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(user);
-    return {
-      ok: true,
-      data: user,
-    };
-  } catch (error) {
-    console.log(error.message);
-    return {
-      ok: false,
-      data: error.message,
-    };
-  }
-};
-
-export const loginUser = async (email, password) => {
-  try {
-    const user = await signInWithEmailAndPassword(auth, email, password);
-
-    return {
-      ok: true,
-      data: user,
-    };
-  } catch (error) {
-    return {
-      ok: false,
-      data: error.message,
-    };
-  }
+export const deleteProyect = async (id) => {
+  await deleteDoc(doc(db, "proyectos", id));
 };

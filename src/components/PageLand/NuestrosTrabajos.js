@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import img1 from '../../assets/img/img1.jpg'
 import img2 from '../../assets/img/img2.jpg'
 import img3 from '../../assets/img/img3.jpg'
@@ -19,57 +19,65 @@ const NuestrosTrabajos = () => {
           <div className="imagen-port">
             <img src={img1} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/powerbi" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img2} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/powerbi" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img3} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/powerbi" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img4} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/powerbi" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img5} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/tableua" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img6} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/tableua" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img7} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/tableua" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
           <div className="imagen-port">
             <img src={img8} alt="" />
             <div className="hover-galeria">
-              <img src={icon1} alt="" />
-              <p>Nuestro trabajo</p>
+              <Link to="/dashboard/tableua" target="_blank">
+                <img src={icon1} alt="" />
+              </Link>
             </div>
           </div>
         </div>
