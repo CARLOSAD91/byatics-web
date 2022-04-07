@@ -1,0 +1,173 @@
+.form-login-uno {
+  letter-spacing: 1px;
+  background: #302e4d;
+}
+
+.form-login-uno h4 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 50px;
+}
+.form-login-uno h6 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.form-login-uno h6 span {
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 16px;
+  background: crimson;
+  border-radius: 8px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.checkbox:checked + label::before,
+.checkbox:not(:checked) + label::before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: crimson;
+  background-color: #151212;
+  top: -10px;
+  left: -10px;
+  font-family: "Material Icons";
+  content: "\f1e2";
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+
+.checkbox:checked + label::before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+.text-center {
+  text-align: center;
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.form-style:focus,
+.form-style:active
+{
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,0.2);
+}
+
+.form-group {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.center-wrap {
+  background: #302e4d;
+}
+
+.form-group i {
+  color: crimson;
+}
+
+.form-group .form-style {
+  width: 90%;
+}
+
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out;
+   background: #302e4d;
+}
+
+.card-font,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 6px;
+ 
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+
+.heading 
+{
+  margin-bottom: 30px;
+  font-size: 24px;
+
+}
+
+
+.btn-new-login
+{
+  height: 44px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: crimson;
+  color: #ffffff;
+  margin-top: 15px;
+  box-shadow: 0 8px 24px 0 rgba(228,10,57,0.2);
+  transition: all 200ms linear;
+}
+
+.btn-new-login:hover {
+  background: #ffffff;
+  color: crimson;
+  box-shadow: 0 8px 24px 0 rgba(138,140,146,0.2);
+}
+
+.link{
+  color: #c4c3ca;
+  margin-top: 20px;
+  display: block;
+  text-decoration: none;
+
+  padding: 40px;
+
+}
+
+.link:hover
+{
+  color: crimson;
+}
