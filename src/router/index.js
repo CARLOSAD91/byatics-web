@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PageLand from "../pages/PageLand";
 import Portafolio from "../layout/Portafolio"
 import About from "../components/Portafolio/About";
@@ -21,11 +21,15 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<PageLand />} />
         <Route path="/login" element={<Login />} />
-        <Route element={<Private />} />
-        <Route path="/proyectos" element={<ProjectNav />}>
-          <Route path="/proyectos/administrador" element={<AdminProjects />} />
-          <Route path="/proyectos/editar/:id" element={<EditarProjects />} />
-          <Route path="/proyectos/nuevo" element={<NuevoProjects />} />
+        <Route element={<Private />}>
+          <Route path="/proyectos" element={<ProjectNav />}>
+            <Route
+              path="/proyectos/administrador"
+              element={<AdminProjects />}
+            />
+            <Route path="/proyectos/editar/:id" element={<EditarProjects />} />
+            <Route path="/proyectos/nuevo" element={<NuevoProjects />} />
+          </Route>
         </Route>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/tableua" element={<Tableau />} />
@@ -38,6 +42,7 @@ const Router = () => {
           <Route path="/portafolio/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Route>
+        <Route path="/*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
