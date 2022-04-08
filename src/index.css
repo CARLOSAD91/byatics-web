@@ -41,3 +41,46 @@
 .grow{
   margin: 10px 0;
 }
+
+/** Conocenos **/
+.container-img{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-description{
+  text-align: justify;
+  padding: 20px;
+}
+
+
+
+.link-conocenos{
+  display: block;
+  text-decoration: none;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title_teams_main{
+  font-size: 30px;
+  color: #642a73;
+}
+
+.title_teams{
+  font-size: 20px;
+  color: rgb(106, 85, 85);
+  margin-bottom: 20px;
+}
+
+.conocenos-main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}

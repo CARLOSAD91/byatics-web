@@ -1,4 +1,5 @@
 import React from "react";
+import Conocenos from "../components/PageLand/Conocenos";
 import Contactanos from "../components/PageLand/Contactanos";
 
 import Home from "../components/PageLand/Home";
@@ -17,6 +18,9 @@ const PageLand = () => {
       </div>
       <div>
         <SobreNosotros />
+      </div>
+      <div>
+        <Conocenos/>
       </div>
       <div>
         <NuestrosTrabajos />

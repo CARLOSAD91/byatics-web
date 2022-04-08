@@ -2,7 +2,7 @@ import { Button, Grid, Card, TextField, CardContent } from "@mui/material";
 import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Error from "../components/Error";
 import swal from "sweetalert";
 import "./css/login.css"
@@ -45,7 +45,7 @@ const Login = () => {
         dni: "12234234234",
       };
       storeUser(user);
-      navigate("/projecto");
+      navigate("/proyectos");
     } else {
       swal({
         icon: "error",
@@ -94,13 +94,16 @@ const Login = () => {
                   />
                   <i class="input-icon material-icons">lock</i>
                 </div>
-                <Button
-                  type="submit"
-                  class="btn-new-login"
-                  onClick={handleClickLogin}
-                >
-                  submit
-                </Button>
+                
+                  <Button
+                    type="submit"
+                    class="btn-new-login"
+                    onClick={handleClickLogin}
+                  >
+                    submit
+                  </Button>
+              
+
                 <p class="text-center">
                   <a href="/" class="link">
                     Forget your Password
@@ -152,9 +155,7 @@ const Login = () => {
                 >
                   submit
                 </Button>
-                <p class="text-center link">
-                 
-                </p>
+                <p class="text-center link"></p>
               </CardContent>
             </Card>
           </Grid>
