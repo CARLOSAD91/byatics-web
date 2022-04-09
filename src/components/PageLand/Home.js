@@ -1,9 +1,18 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { UserContext } from "../../context/UserContext";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 
 
 const Home = () => {
+
+  const btnRef = useRef()
+  const menuRef = useRef()
+
+  const clickMenu = () => {
+    btnRef.current.addEventListener("click", () => {
+      menuRef.current.classList.toggle("mostrar");
+    });
+  };
   
   const { removeUser } = useContext(UserContext);
 
@@ -13,10 +22,10 @@ const Home = () => {
   return (
     <header>
       <nav class="menu">
-        <span id="btnmenu">
+        <span onClick={clickMenu} ref={btnRef} class="btnmenu">
           <i class="fas fa-bars"></i>
         </span>
-        <ul class="menu_link">
+        <ul ref={menuRef} class="menu_link">
           <li>
             <a href="/">Inicio</a>
           </li>

@@ -434,7 +434,7 @@ main .sobre-nosotros {
   .menu {
     padding: 5px;
   }
-  #btnmenu {
+  .btnmenu {
     border: 1px solid white;
     display: block;
     color: white;
