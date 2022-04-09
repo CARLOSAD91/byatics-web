@@ -1,4 +1,5 @@
 import React from 'react'
+import perfil from "../../assets/avatar-1.svg"
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
               </a>
             </div>
             <div className="home-img">
-              <img src="" alt="" />
+              <img src={perfil} alt="" />
             </div>
           </div>
         </div>
