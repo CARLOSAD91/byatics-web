@@ -1,15 +1,9 @@
 import { Container, Grid } from "@mui/material";
-import React, { useRef } from "react";
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 const Header = () => {
-  const dayNigthRef = useRef();
-  const clickMe = () => {
-    dayNigthRef.current.addEventListener("click", () => {
-      document.body.classNameList.toggle("dark");
-    });
-  };
-
+ 
   return (
     <Container>
       <Grid container>
