@@ -8,18 +8,10 @@
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
-  --skin-color:#ec1839
+  --skin-color:#642a73
 }
 
-body.dark 
-{
-  --bg-black-900: #151515;
-  --bg-black-100: #222222;
-  --bg-black-50: #393939;
-  --text-black-900: #ffffff;
-  --text-black-700: #e9e9e9;
 
-}
 
 body{
 
@@ -182,6 +174,7 @@ body{
   height: 100%;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -315,6 +308,7 @@ body{
 .home {
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   color: var(--text-black-900);
 }
 
@@ -597,6 +591,7 @@ h3.my-profession{
 
 .section-grid{
 display: grid;
+flex-wrap: wrap;
 grid-template-columns: repeat(3, 1fr);
 }
 
@@ -737,6 +732,7 @@ grid-template-columns: repeat(3, 1fr);
   height: 50px;
   pad: 0 60px !important;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center !important;

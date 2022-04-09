@@ -21,6 +21,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/powerbi" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -29,6 +30,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/powerbi" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -37,6 +39,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/powerbi" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -45,6 +48,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/powerbi" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -53,6 +57,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/tableua" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -61,6 +66,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/tableua" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -69,6 +75,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/tableua" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>
@@ -77,6 +84,7 @@ const NuestrosTrabajos = () => {
             <div className="hover-galeria">
               <Link to="/dashboard/tableua" target="_blank">
                 <img src={icon1} alt="" />
+                <p>Nuestro trabajo</p>
               </Link>
             </div>
           </div>

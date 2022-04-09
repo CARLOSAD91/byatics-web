@@ -3,11 +3,11 @@ import ilustracion1 from '../../assets/img/ilustracion1.svg'
 
 const SobreNosotros = () => {
   return (
-    <section className="contenedor sobre-nosotros" id="sobre-nosotros">
-      <h2 className="titulo">NOSOTROS</h2>
-      <div className="contenedor-sobre-nosotros">
-        <img src={ilustracion1} alt="" className="imagen-about-us" />
-        <div className="contenido-textos">
+    <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+      <h2 class="titulo">NOSOTROS</h2>
+      <div class="contenedor-sobre-nosotros">
+        <img src={ilustracion1} alt="" class="imagen-about-us" />
+        <div class="contenido-textos">
           <h3>
             <span>1</span>¿Quienes Somos?
           </h3>

@@ -15,60 +15,60 @@ const Contactanos = () => {
           </p>
           <p className="column__txt">
             <span>
-              <i className="fas fa-phone-alt"></i>
+              <i class="fas fa-phone-alt"></i>
             </span>
             999-999-999
           </p>
           <p className="column__txt">
             <span>
-              <i className="fas fa-phone-alt"></i>
+              <i class="fas fa-phone-alt"></i>
             </span>
             999-999-999
           </p>
           <p className="column__txt">
             <span>
-              <i className="fas fa-map-marker-alt"></i>Lima-Perú
+              <i class="fas fa-map-marker-alt"></i>Lima-Perú
             </span>
           </p>
           <p className="column__txt">
             <span>
-              <i className="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </span>
-            contacto@gmail.com
+            contacto@biatycs.com
           </p>
           <div className="social-icon">
             <a href="/" className="social-icon__link">
               <span>
-                <i className="fab fa-facebook-f"></i>
+                <i class="fab fa-facebook-f"></i>
               </span>
             </a>
             <a href="/" className="social-icon__link">
               <span>
-                <i className="fab fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
               </span>
             </a>
             <a href="/" className="social-icon__link">
               <span>
-                <i className="fas fa-envelope"></i>
+                <i class="fas fa-envelope"></i>
               </span>
             </a>
           </div>
         </div>
 
-        <form action="" method="POST" className="formulario column column--50">
-          <label  className="formulario__label">
+        <form action="" method="POST" class="formulario column column--50">
+          <label for="" class="formulario__label">
             Nombre:
           </label>
-          <input type="text" className="formulario__input-txt" name="nombre" />
-          <label  className="formulario__label">
+          <input type="text" class="formulario__input-txt" name="nombre" />
+          <label for="" class="formulario__label">
             Correo:
           </label>
-          <input type="text" className="formulario__input-txt" name="correo" />
-          <label  className="formulario__label">
+          <input type="text" class="formulario__input-txt" name="correo" />
+          <label for="" class="formulario__label">
             Teléfono:
           </label>
-          <input type="text" className="formulario__input-txt" name="telefono" />
-          <label  className="formulario__label">
+          <input type="text" class="formulario__input-txt" name="telefono" />
+          <label for="" class="formulario__label">
             Mensaje:
           </label>
           <textarea
@@ -76,9 +76,9 @@ const Contactanos = () => {
             id=""
             cols="30"
             rows="10"
-            className="formulario__textarea"
+            class="formulario__textarea"
           ></textarea>
-          <input type="submit" value="Enviar" className="btn formulario__btn" />
+          <input type="submit" value="Enviar" class="btn formulario__btn" />
         </form>
       </div>
     </section>

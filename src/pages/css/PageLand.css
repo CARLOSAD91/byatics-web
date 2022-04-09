@@ -6,13 +6,29 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+.smooth_behavior {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Raleway", sans-serif;
 }
+
+.primary {
+      height: 150px;
+      overflow: hidden
+      
+    }
+.secondary {
+      height: 100%;
+      width: 100%
+
+    }
+.terces {
+      stroke: none;
+      fill: #ffff
+
+    }
 
 .contenedor {
   padding: 60px 0;
@@ -37,10 +53,33 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .column {
   width: 100%;
+}
+.column__title {
+  font-size: 1.3em;
+  margin: 5px;
+}
+.column__txt {
+  padding: 5px;
+}
+
+#btnmenu {
+  display: none;
+}
+
+/*----------------Modal----------------*/
+.modal {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 300;
 }
 
 /*----------------Header----------------*/
@@ -55,33 +94,36 @@ header {
       hsla(280, 95%, 50%, 0.459),
       hsla(320, 45%, 52%, 0.664)
     ),
-    url(../../assets/img/portada2.jpg);
+    url(../img/portada2.jpg);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
       to right,
       hsla(280, 95%, 50%, 0.459),
       hsla(320, 45%, 52%, 0.664)
     ),
-    url(../../assets/img/portada2.jpg);
+    url('../../assets/img/portada2.jpg');
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-attachment: fixed;
   position: relative;
 }
-
-nav {
-  text-align: right;
+.menu_link {
+  display: flex;
+  justify-content: end;
   padding: 30px 50px 0 0;
+  width: 100%;
+}
+li {
+  list-style: none;
 }
 
-nav > a {
-  color: #fff;
-  font-weight: 300;
+li > a {
   text-decoration: none;
-  margin-right: 10px;
+  color: #ffff;
+  padding: 10px;
+  margin: 10px;
 }
-
-nav > a:hover {
+li > a:hover {
   text-decoration: underline;
 }
 
@@ -94,7 +136,6 @@ header .textos-header {
   flex-direction: column;
   text-align: center;
 }
-
 
 .textos-header h1 {
   font-size: 50px;
@@ -156,58 +197,72 @@ main .sobre-nosotros {
 
 /*----------------Galeria----------------*/
 
-.portafolio {
-  background: #f2f2f2;
+
+.portafolio{
+    background: #f2f2f2;
 }
 
-.galeria-port {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.imagen-port {
-  width: 24%;
-  margin-bottom: 10px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.5);
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, .5);
 }
 
-.imagen-port > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/*-----------------arrow-up-----------------*/
+
+.arrow-up {
   display: block;
+  font-size: 1.4em;
+  color: var(--colorMain);
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
 }
-
-.hover-galeria {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  transform: scale(0);
-  background: hsla(273, 91%, 27%, 0.7);
-  transition: transform 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.arrow-up:hover {
+  cursor: pointer;
 }
-
-.hover-galeria img {
-  width: 50px;
-}
-
-.hover-galeria p {
-  color: #fff;
-}
-
-.imagen-port:hover .hover-galeria {
-  transform: scale(1);
-}
-
 /*-----------------Clients-----------------*/
 
 .cards {
@@ -287,7 +342,7 @@ main .sobre-nosotros {
   text-align: center;
   text-decoration: none;
   width: 120px;
-  background: var(--colorMain);
+  background: var(--colorMain) !important;
   color: white;
   padding: 10px;
   margin: 10px auto;
@@ -339,42 +394,36 @@ main .sobre-nosotros {
 
 /*--------------footer--------------*/
 
-footer {
-  background: #414141;
-  padding: 60px 0 30px 0;
-  margin: auto;
-  overflow: hidden;
+.main-footer {
+  background: #222;
+  color: white;
+  padding: 5px;
+  font-size: 1em;
+}
+.main-footer a {
+  color: white;
+  text-decoration: none;
+}
+.main-footer h2 {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.main-footer i::before {
+  position: relative;
+  top: 1px;
+  padding-right: 5px;
 }
 
-.contenedor-footer {
-  display: flex;
-  width: 90%;
-  justify-content: space-evenly;
-  margin: auto;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #ccc;
-}
-
-.content-foo {
+.copy {
+  width: 100%;
+  margin-top: 45px;
   text-align: center;
 }
-
-.content-foo h4 {
-  color: #fff;
-  border-bottom: 3px solid #af20d3;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+.column--50 {
+  width: 48%;
 }
-
-.content-foo p {
-  color: #ccc;
-}
-
-.titulo-final {
-  text-align: center;
-  font-size: 24px;
-  margin: 20px 0 0 0;
-  color: #9e9797;
+.column--33 {
+  width: 31%;
 }
 
 @media screen and (max-width: 768px) {
@@ -382,7 +431,47 @@ footer {
     background-position: center;
     height: 600px;
   }
+  .menu {
+    padding: 5px;
+  }
+  #btnmenu {
+    border: 1px solid white;
+    display: block;
+    color: white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  .menu_link {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s linear;
+  }
+  .mostrar {
+    height: 305px;
+  }
 
+  li {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+  }
   .contenedor-sobre-nosotros {
     flex-direction: column;
     justify-content: center;
@@ -401,6 +490,11 @@ footer {
 
   .imagen-port {
     width: 44%;
+  }
+
+  /*-------------Modal-------------*/
+  .modal__img {
+    width: 90%;
   }
 
   /*-------------Clientes-------------*/
@@ -438,6 +532,15 @@ footer {
 
   .servicio-ind img {
     width: 90%;
+  }
+  .column--50 {
+    width: 90%;
+  }
+  .column--33 {
+    width: 90%;
+  }
+  .main-footer {
+    font-size: 0.8em;
   }
 }
 

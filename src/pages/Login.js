@@ -69,7 +69,7 @@ const Login = () => {
         <input type="checkbox" className="checkbox" id="reg-log" />
         <label for="reg-log"></label>
         <Grid container class="card-3d-wrap">
-          <Grid item md={12} class="card-3d-wrapper">
+          <Grid item md={12} ms={6} xs={6} class="card-3d-wrapper">
             <Card class="card-font">
               <CardContent class="center-wrap">
                 <h4 class="heading">Log In</h4>
@@ -94,15 +94,14 @@ const Login = () => {
                   />
                   <i class="input-icon material-icons">lock</i>
                 </div>
-                
-                  <Button
-                    type="submit"
-                    class="btn-new-login"
-                    onClick={handleClickLogin}
-                  >
-                    submit
-                  </Button>
-              
+
+                <Button
+                  type="submit"
+                  class="btn-new-login"
+                  onClick={handleClickLogin}
+                >
+                  submit
+                </Button>
 
                 <p class="text-center">
                   <a href="/" class="link">
@@ -115,7 +114,7 @@ const Login = () => {
             <Card class="card-back">
               <CardContent class="center-wrap">
                 <h4 class="heading">Sign Up</h4>
-                <Grid item md={12} class="form-group">
+                <Grid item md={12} ms={6} xs={6} class="form-group">
                   <TextField
                     type="email"
                     name="fullname"
@@ -126,7 +125,7 @@ const Login = () => {
                   />
                   <i class="input-icon material-icons">accessibility</i>
                 </Grid>
-                <Grid item md={12} class="form-group">
+                <Grid md={12} ms={6} xs={6} class="form-group">
                   <TextField
                     type="email"
                     name="email"
@@ -137,7 +136,7 @@ const Login = () => {
                   />
                   <i class="input-icon material-icons">alternate_email</i>
                 </Grid>
-                <Grid item md={12} class="form-group">
+                <Grid md={12} ms={6} xs={6} class="form-group">
                   <TextField
                     type="password"
                     name="password"

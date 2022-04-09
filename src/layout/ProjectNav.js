@@ -51,7 +51,7 @@ const ProjectNav = () => {
               </div>
             </div>
           </Grid>
-          <Grid item md={10} sm={6} sx={6}>
+          <Grid item md={10} sm={12} sx={12}>
             <Outlet />
           </Grid>
         </Grid>

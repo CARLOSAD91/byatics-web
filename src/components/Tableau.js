@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import { Container, Grid } from "@mui/material";
+import { Box } from "@mui/system";
 
 const { tableau } = window;
 
@@ -15,10 +17,16 @@ function Tableau() {
     initViz();
   }, []);
   return (
-    <div>
-      <h1>Tableau</h1>
-      <div ref={ref}></div>
-    </div>
+    <Container>
+      <Grid container>
+        <Grid maxWidth="100%" item md={12} sm={12} xs={12} sx={{ height: "80vh" }}>
+          <div className="tableau-main">
+            <h1>Tableau</h1>
+            <div className="dashboard-tableau" ref={ref}></div>
+          </div>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 

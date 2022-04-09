@@ -84,3 +84,30 @@
   margin-bottom: 20px;
   padding: 0 30px;
 }
+
+/*Power BI*/
+.div-iframe{
+  max-width: 100%;
+  width: 100%;
+  height: 90vh;
+}
+
+@media screen and (max-width: 768px) {
+  .div-iframe{
+    height: 20vh;
+  }
+  .dasborad-header{
+    height: 30vh;
+  }
+}
+
+/*Tableau*/
+.tableau-main {
+  height: 80vh;
+}
+.dashboard-tableau{
+  max-width: 100%;
+  width: 100%;
+ height: 80vh;
+
+}

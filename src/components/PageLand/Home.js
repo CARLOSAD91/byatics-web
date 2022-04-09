@@ -1,35 +1,63 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
 import { UserContext } from "../../context/UserContext";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 
+
 const Home = () => {
+  
   const { removeUser } = useContext(UserContext);
-  const navigate = useNavigate();
+
    const handleDelete = () => {
      removeUser();
-     navigate("/login");
    };
   return (
     <header>
-      <nav className="menu_item">
-        <a href="/">Inicio</a>
-        <a href="#sobre-nosotros">Acerca de</a>
-        <a href="#conocenos">conocenos</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#about-services">Servicios</a>
-        <a href="#contacto">Contacto</a>
-        <Link to="/login">
-          <Button onClick={handleDelete}>
-            <SupervisorAccountIcon />
-          </Button>
-        </Link>
+      <nav class="menu">
+        <span id="btnmenu">
+          <i class="fas fa-bars"></i>
+        </span>
+        <ul class="menu_link">
+          <li>
+            <a href="/">Inicio</a>
+          </li>
+          <li>
+            <a href="#sobre-nosotros">Acerca de</a>
+          </li>
+          <li>
+            <a href="#conocenos">Conocenos</a>
+          </li>
+          <li>
+            <a href="#portafolio">Portafolio</a>
+          </li>
+          <li>
+            <a href="#about-services">Servicios</a>
+          </li>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+          <li>
+            <a onClick={handleDelete} href="/login" target="_blank">
+              <SupervisorAccountIcon />
+            </a>
+          </li>
+        </ul>
       </nav>
-      <section className="textos-header">
+      <section class="textos-header">
         <h1>BIATYCS SMART SOLUTIONS</h1>
         <h2>Juntos transformaremos el mundo.</h2>
       </section>
+      <div className="wave primary">
+        <svg
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          className="secondary"
+        >
+          <path
+            d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            className="terces"
+          ></path>
+        </svg>
+      </div>
     </header>
   );
 }
